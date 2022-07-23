@@ -1,16 +1,15 @@
-import PropTypes from 'prop-types'
+
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 export class Navbar extends Component {
-  static propTypes = {}
-
   render() {
     return (
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg bg-dark fixed-top">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/">
-            Navbar
-          </a>
+          <Link className="navbar-brand text-light" to="/">
+            NewsJunkey
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,14 +24,34 @@ export class Navbar extends Component {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <Link className="nav-link active  text-light" aria-current="page" to="/">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/about">
-                  About
-                </a>
+                <Link className="nav-link  text-light" to="/sports">
+                  Sports
+                </Link>  
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link  text-light" to="/entertainment">
+                  Entertainment
+                </Link>  
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link  text-light" to="/general">
+                  General
+                </Link>  
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link  text-light" to="/health">
+                  Health
+                </Link>  
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link  text-light" to="/science">
+                  Science
+                </Link>  
               </li>
             </ul>
           </div>
